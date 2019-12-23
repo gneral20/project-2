@@ -1,7 +1,10 @@
 <img src=<%= current_user.image%> width= 100 height= 100 >
-
+<br>
+<%= current_user.name%>
+<br>
 <%= link_to 'Add Photo', new_image_path%>
-
+<br>
+<hr>
 
 <% @images.each do |image|%>
 

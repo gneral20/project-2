@@ -23,12 +23,13 @@ class ImagesController < ApplicationController
     end
 
     def edit
+        @image = Image.find(params[:id])
     end
 
     def update
         @user = current_user
         @user.images.update(image_params)
-        redirect_to edit_image_path(@image)
+        redirect_to images_path
     end
 
     def destroy

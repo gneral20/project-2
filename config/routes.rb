@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     passwords: 'users/passwords', 
     confirmations: 'users/confirmations'}
     
-      root to: "images#index"
+      root to: "home#homepage"
 
 end
 
