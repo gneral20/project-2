@@ -1,3 +1,18 @@
+# Rails.application.routes.draw do
+  # resources :images
+#   devise_for :users
+#   root to: "home#index"
+# end
+
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :images
+  devise_for :users, controllers: { registrations: 'users/registrations',
+    sessions: 'users/sessions', 
+    unlocks: 'users/unlocks',
+    passwords: 'users/passwords', 
+    confirmations: 'users/confirmations'}
+    
+      root to: "images#index"
+
 end
+
