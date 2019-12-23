@@ -36,7 +36,7 @@ class ImagesController < ApplicationController
         @user = current_user
         @image = @user.images.find(params[:id])
         @image.destroy
-        redirect_to images_path
+        redirect_to new_user_session_path
     end
 
     private

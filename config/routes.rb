@@ -5,14 +5,15 @@
 # end
 
 Rails.application.routes.draw do
-  resources :images
-  devise_for :users, controllers: { registrations: 'users/registrations',
+  
+  devise_for :users, controllers: { 
+    registrations: 'users/registrations',
     sessions: 'users/sessions', 
     unlocks: 'users/unlocks',
     passwords: 'users/passwords', 
     confirmations: 'users/confirmations'}
-    
-      root to: "home#homepage"
-
+    # devise_for :users
+    resources :images
+    root to: "home#homepage"
 end
 
