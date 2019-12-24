@@ -1,0 +1,32 @@
+<%= form_for @profile, url: {action: 'update'} do |f|%>
+
+<div class="form-group">
+<%= f.label :First_nam%>
+<%= f.text_field :first_name, class:"form-control"%>
+<small id="emailHelp" class="form-text text-muted">Please enter your first name.</small>
+</div>
+<br>
+
+<div class="form-group">
+<%= f.label :Last_name%>
+<%= f.text_field :last_name, class:"form-control"%>
+<small id="emailHelp" class="form-text text-muted">Please enter your last name.</small>
+
+</div>
+<br>
+
+<div class="form-group">
+<%= f.label :Pio%>
+<%= f.text_field :pio, class:"form-control"%>
+</div>
+<br>
+
+<div class="form-group">
+<%= f.label :Profile_image%>
+<%= f.text_field :profile_image, class:"form-control"%>
+</div>
+<br>
+
+<%= f.submit 'Save'%>
+
+<%end%>

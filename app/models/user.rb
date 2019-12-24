@@ -4,7 +4,11 @@ class User < ApplicationRecord
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
+  has_one :profile, dependent: :destroy
+  before_create :build_profile 
+  accepts_nested_attributes_for :profile
+  
   has_many :images, dependent: :destroy
+  
 
 end

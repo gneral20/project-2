@@ -1,4 +1,5 @@
 # Rails.application.routes.draw do
+  # resources :profiles
   # resources :images
 #   devise_for :users
 #   root to: "home#index"
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations'}
     # devise_for :users
     resources :images
+    resources :profiles
     root to: "home#homepage"
+
 end
 

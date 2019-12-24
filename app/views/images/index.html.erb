@@ -1,20 +1,45 @@
-<img src=<%= current_user.image%> width= 100 height= 100 >
-<br>
-<%= current_user.name%>
-<br>
-<%= link_to 'Add Photo', new_image_path%>
-<br>
-
-<hr>
 
 
-<% @images.each do |image|%>
+<div class="container">
+    <div class='row'>
+        <div class='col-10'>
+        <div class='row'>
+                <% @images.each do |image|%>
+           <div class="col-md-3">
+           <div class='name-pic'> 
+         
+                <img class='rounded-circle'src=<%= image.user.profile.profile_image%> width='35px' height='35px'>
+                <%= image.user.name%>
+                </div>
+                <%= link_to image_path(image) do %>
+                <img class="img-thumbnail" width="300px" height="300px" src=<%= image.img%>>
+                <% end %>
+            </div>    
+                <%end%>
+          </div>
+        </div>
+        <div class='col-2'>
+                        <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+                                <h4 id="fat">   <%= current_user.name%> </h4>
+                                <p>...</p>
+                                <h4 id="mdo">   <%= current_user.name%> </h4>
+                                <p>...</p>
+                                <h4 id="one">   <%= current_user.name%> </h4>
+                                <p>...</p>
+                                <h4 id="two">   <%= current_user.name%> </h4>
+                                <p>...</p>
+                                <h4 id="three">   <%= current_user.name%> </h4>
+                                <p>...</p>
+                                 <h4 id="three">   <%= current_user.name%> </h4>
+                                <p>...</p>
+                                 <h4 id="three">   <%= current_user.name%> </h4>
+                                <p>...</p>
+                                 <h4 id="three">   <%= current_user.name%> </h4>
+                                <p>...</p>
+                        </div>
 
-<%= link_to image_path(image) do %>
+        
+        </div>
 
- <img src=<%= image.img%> width='150' height='150'>
-<% end %>
-
-
-<%end%>
-
+    </div>
+</div>

@@ -10,7 +10,6 @@
   <title>Bare - Start Bootstrap Template</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <%= csrf_meta_tags %>
@@ -23,9 +22,7 @@
 
 
   <body>
-
-
-
+ 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
@@ -73,6 +70,26 @@
     </div>
   </nav>
 
+  <!-- Profile Content -->
+
+   <% if user_signed_in?%>
+           <%=link_to profile_path(1) do%>
+
+   <div class='container'>
+    <div class='row'>
+        <div >
+                <img class="rounded-circle" src=<%= current_user.profile.profile_image%> width= 100 height= 100 >
+                <br>
+                <%= current_user.profile.first_name%>
+                <br>
+                <%= link_to 'Add Photo', new_image_path%>
+                <br>
+        </div>
+     </div>
+    </div>
+                <hr>
+  <%end%>
+<%end%>
   <!-- Page Content -->
   <div class="container">
     <div class="row">

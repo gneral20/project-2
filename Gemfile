@@ -6,6 +6,15 @@ ruby '2.6.3'
 # My Devise Addition
 gem 'devise'
 
+gem 'carrierwave', '~> 2.0'
+# 
+gem 'cloudinary'
+#
+gem 'fog', '~> 1.37.0'
+#
+gem 'mini_magick'
+# 
+# gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2'
 # Use postgresql as the database for Active Record

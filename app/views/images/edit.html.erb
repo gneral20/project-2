@@ -1,18 +1,24 @@
-<img src=<%= current_user.image%> width= 100 height= 100 >
-<br>
-<%= current_user.name%>
-<br>
-<hr>
-<%= form_for @image, url: {action: 'update'} do |f|%>
 
+<%= form_for @image, url: {action: 'update'} do |f|%>
+<div class="form-group">
 <%= f.label :Title%>
-<%= f.text_field :title%>
+<%= f.text_field :title, class:"form-control"%>
+<small id="emailHelp" class="form-text text-muted">Please enter a title for your image.</small>
+</div>
 <br>
+
+<div class="form-group">
 <%= f.label :Comment%>
-<%= f.text_field :comment%>
+<%= f.text_field :comment, class:"form-control"%>
+<small id="emailHelp" class="form-text text-muted">Please enter a comment for your image.</small>
+
+</div>
 <br>
+
+<div class="form-group">
 <%= f.label :Image%>
-<%= f.text_field :img%>
+<%= f.text_field :img, class:"form-control"%>
+</div>
 <br>
 
 <%= f.submit 'Save'%>

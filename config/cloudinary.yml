@@ -1,0 +1,10 @@
+# config/cloudinary.yml
+development:
+  cloud_name: "dppuzpndw"
+  api_key: "632177633479964"
+  api_secret: "R9yK2m4Rube3djvoHcitNbX1pc8"
+
+production:
+  cloud_name: "dppuzpndw"
+  api_key: "632177633479964"
+  api_secret: "R9yK2m4Rube3djvoHcitNbX1pc8"
