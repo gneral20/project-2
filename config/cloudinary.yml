@@ -1,10 +1,29 @@
 # config/cloudinary.yml
 development:
-  cloud_name: "dppuzpndw"
-  api_key: "632177633479964"
-  api_secret: "R9yK2m4Rube3djvoHcitNbX1pc8"
-
+  cloud_name: dppuzpndw
+  api_key: '632177633479964'
+  api_secret: R9yK2m4Rube3djvoHcitNbX1pc8
+  enhance_image_tag: true
+  static_file_support: false
 production:
-  cloud_name: "dppuzpndw"
-  api_key: "632177633479964"
+  cloud_name: dppuzpndw
+  api_key: '632177633479964'
+  api_secret: R9yK2m4Rube3djvoHcitNbX1pc8
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dppuzpndw
+  api_key: '632177633479964'
+  api_secret: R9yK2m4Rube3djvoHcitNbX1pc8
+  enhance_image_tag: true
+  static_file_support: false
+
+  auth = {
+  cloud_name: "dppuzpndw",
+  api_key:    "632177633479964",
   api_secret: "R9yK2m4Rube3djvoHcitNbX1pc8"
+}
+
+
+
+

@@ -18,6 +18,7 @@ class ImagesController < ApplicationController
 
     def create
         @user = current_user
+        
         @user.images.create(image_params)
         redirect_to images_path
     end
@@ -29,7 +30,7 @@ class ImagesController < ApplicationController
 
     def update
         @user = current_user
-        @user.images.update(image_params)
+        @image = @user.images.update(image_params)
         redirect_to images_path
     end
 
