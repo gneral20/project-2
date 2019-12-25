@@ -11,6 +11,7 @@ class ProfilesController < ApplicationController
 
     def show_profile
         @profile = Profile.find(params[:id])
+        @image = @profile.user.images.all
     end
 
     def edit
