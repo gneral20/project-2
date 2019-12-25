@@ -8,7 +8,9 @@
   <meta name="author" content="">
 
   <title>Bare - Start Bootstrap Template</title>
-
+  
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -27,12 +29,12 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
        <% if user_signed_in?%>
-      <a class="navbar-brand" href="/images">Meshgram</a>
+      <a class="navbar-brand" href="/images"><span class="logo">Meshgram</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
        <%else%>
-       <a class="navbar-brand" href="/">Meshgram</a>
+       <a class="navbar-brand" href="/"><span class="logo">Meshgram</span></a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

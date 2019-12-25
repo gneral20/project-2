@@ -14,3 +14,9 @@
  *= require_self
  *= require bootstrap.min
 */
+.logo{
+    font-family: 'Dancing Script', cursive;
+}
+a{
+    text-decoration: none;
+}
