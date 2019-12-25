@@ -9,8 +9,13 @@ class ProfilesController < ApplicationController
         @images = current_user.images
     end
 
+    def show_profile
+        @profile = Profile.find(params[:id])
+    end
+
     def edit
         @profile = current_user.profile
+        @images = current_user.images
     end
 
     def update

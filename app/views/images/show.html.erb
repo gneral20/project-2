@@ -1,12 +1,20 @@
 
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-4 col-ms-12">
+      <img src=<%=@image.img%> class="card-img" alt="...">
+    </div>
+    <div class="col-md-8 col-ms-12">
+      <div class="card-body">
+        <h5 class="card-title"><%=@image.title%></h5>
+        <p class="card-text"><%=@image.comment%></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% if current_user.id == @image.user_id%>
-<%= link_to 'Edit', edit_image_path%>
-<br>
-<%=link_to 'Delete', image_path(@image), method: :DELETE %> %>
-<% end %>
-<h1><%=@image.title%></h1>
-<br>
-<img src=<%=@image.img%> height="350" width="250">
-<br>
-<%= @image.comment%>
+
+        <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-danger"><%= link_to 'Edit Image', edit_image_path%></button>
+            <button type="button" class="btn btn-danger"><%=link_to 'Delete', image_path(@image), method: :DELETE%> </button>
+        </div>

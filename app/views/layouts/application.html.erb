@@ -82,7 +82,12 @@
                 <br>
                 <%= current_user.profile.first_name%>
                 <br>
-                <%= link_to 'Add Photo', new_image_path%>
+                <%= link_to 'My Photos', profile_path(1), class: "btn btn-warning"%>
+                <%= link_to 'Add Photo', new_image_path, class: "btn btn-warning"%>
+                <% if current_user.id == current_user.profile.user_id%>
+                <%= link_to "Edit Profile", edit_profile_path(1), class: "btn btn-warning"%>
+                <%end%>
+
                 <br>
         </div>
      </div>

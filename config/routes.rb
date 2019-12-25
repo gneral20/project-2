@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     # devise_for :users
     resources :images
     resources :profiles
+    get "/profiles/:id/showprofile", to: "profiles#show_profile", as: "showprofile"
     root to: "home#homepage"
 
 end

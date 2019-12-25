@@ -14,6 +14,7 @@ class ImagesController < ApplicationController
     def new
         @user = current_user
         @image = @user.images.new
+        @image.avatar.attach(params[:avatar])
     end
 
     def create
@@ -24,6 +25,7 @@ class ImagesController < ApplicationController
 
     def edit
         @image = Image.find(params[:id])
+
     end
 
     def update
