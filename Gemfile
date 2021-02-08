@@ -6,7 +6,7 @@ ruby '2.6.3'
 # My Devise Addition
 gem 'devise'
 
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 # 
 gem 'cloudinary'
 #
